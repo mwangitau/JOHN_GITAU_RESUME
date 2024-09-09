@@ -92,6 +92,23 @@ def generate_resume():
             padding: 1rem 0;
             margin-top: 2rem;
         }
+        .language-item {
+            margin-bottom: 1rem;
+        }
+        .language-name {
+            font-weight: bold;
+            margin-bottom: 0.25rem;
+        }
+        .proficiency-bar {
+            height: 20px;
+            background-color: #e0e0e0;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .proficiency-level {
+            height: 100%;
+            background-color: var(--secondary-color);
+        }
         @media (max-width: 768px) {
             h1 { font-size: 2rem; }
             h2 { font-size: 1.5rem; }
@@ -134,7 +151,7 @@ def generate_resume():
     resume.add("            </div>")
     resume.add("        </section>")
 
-     # Languages
+    # Languages
     resume.add("        <section id='languages'>")
     resume.add("            <h2>Languages</h2>")
     languages = [
@@ -229,9 +246,6 @@ def generate_resume():
         resume.add(f"                <p>{escape_html(edu['period'])}</p>")
         resume.add("            </div>")
     resume.add("        </section>")
-
-
-]
 
     # Certifications
     resume.add("        <section id='certifications'>")
