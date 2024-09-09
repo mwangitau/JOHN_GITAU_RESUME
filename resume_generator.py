@@ -213,6 +213,12 @@ def generate_resume():
         resume.add("            </div>")
     resume.add("        </section>")
 
+    languages = [
+    {"name": "English", "proficiency": 95},
+    {"name": "Swahili", "proficiency": 90},
+    {"name": "Kikuyu", "proficiency": 85}
+]
+
     # Certifications
     resume.add("        <section id='certifications'>")
     resume.add("            <h2>Certifications</h2>")
