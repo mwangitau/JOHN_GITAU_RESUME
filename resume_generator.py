@@ -298,6 +298,32 @@ def generate_resume():
 
     return resume.build()
 
+import qrcode
+
+# URL of the resume
+resume_url = "https://mwangitau.github.io/JOHN_GITAU_RESUME/"
+
+# Create a QR code instance
+qr = qrcode.QRCode(
+    version=1,
+    error_correction=qrcode.constants.ERROR_CORRECT_L,
+    box_size=10,
+    border=4,
+)
+
+# Add the resume URL to the QR code
+qr.add_data(resume_url)
+qr.make(fit=True)
+
+# Create an image from the QR code
+qr_image = qr.make_image(fill='black', back_color='white')
+
+# Save the QR code image
+qr_image.save("JOHN_GITAU_RESUME_QR_CODE.png")
+
+print("QR Code generated and saved as 'JOHN_GITAU_RESUME_QR_CODE.png'")
+
+
 # Generate the resume HTML
 resume_html = generate_resume()
 
