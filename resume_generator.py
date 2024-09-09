@@ -134,6 +134,23 @@ def generate_resume():
     resume.add("            </div>")
     resume.add("        </section>")
 
+     # Languages
+    resume.add("        <section id='languages'>")
+    resume.add("            <h2>Languages</h2>")
+    languages = [
+        {"name": "English", "proficiency": 90},
+        {"name": "Swahili", "proficiency": 100},
+        {"name": "Kikuyu", "proficiency": 80}
+    ]
+    for lang in languages:
+        resume.add("            <div class='language-item'>")
+        resume.add(f"                <div class='language-name'>{escape_html(lang['name'])}</div>")
+        resume.add("                <div class='proficiency-bar'>")
+        resume.add(f"                    <div class='proficiency-level' style='width: {lang['proficiency']}%;'></div>")
+        resume.add("                </div>")
+        resume.add("            </div>")
+    resume.add("        </section>")
+
     # Work Experience
     resume.add("        <section id='experience'>")
     resume.add("            <h2>Work Experience</h2>")
@@ -213,10 +230,7 @@ def generate_resume():
         resume.add("            </div>")
     resume.add("        </section>")
 
-    languages = [
-    {"name": "English", "proficiency": 95},
-    {"name": "Swahili", "proficiency": 90},
-    {"name": "Kikuyu", "proficiency": 85}
+
 ]
 
     # Certifications
