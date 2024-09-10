@@ -90,6 +90,26 @@
             height: 100%;
             background-color: var(--secondary-color);
         }
+        .project-item {
+            margin-bottom: 1.5rem;
+        }
+        .project-item h3 {
+            margin-bottom: 0.5rem;
+        }
+        .project-link {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background-color: var(--secondary-color);
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 0.5rem;
+            transition: background-color 0.3s;
+        }
+        .project-link:hover {
+            background-color: #2980b9;
+        }
+
         @media (max-width: 768px) {
             h1 { font-size: 2rem; }
             h2 { font-size: 1.5rem; }
@@ -132,6 +152,14 @@
                 <span class='skill'>Communication</span>
             </div>
         </section>
+        <section id='projects'>
+            <h2>Projects</h2>
+            <div class='project-item'>
+                <h3>R Data Analysis Portfolio: Kenya Malaria Infection</h3>
+                <p>Comprehensive analysis of malaria infection rates in Kenya using R, demonstrating proficiency in data manipulation, visualization, and statistical analysis.</p>
+                <a href='r_portfolio.html' target='_blank' class='project-link'>View Project</a>
+            </div>
+        </section>
         <section id='languages'>
             <h2>Languages</h2>
             <div class='language-item'>
@@ -147,9 +175,9 @@
                 </div>
             </div>
             <div class='language-item'>
-                <div class='language-name'>Kikuyu</div>
+                <div class='language-name'>Duetsch</div>
                 <div class='proficiency-bar'>
-                    <div class='proficiency-level' style='width: 80%;'></div>
+                    <div class='proficiency-level' style='width: 20%;'></div>
                 </div>
             </div>
         </section>

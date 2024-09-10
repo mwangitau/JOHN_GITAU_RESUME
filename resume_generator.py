@@ -13,6 +13,17 @@ class ResumeBuilder:
     def build(self):
         return "\n".join(self.html)
 
+# Add this projects list before the generate_resume() function
+projects = [
+    {
+        "name": "R Data Analysis Portfolio: Kenya Malaria Infection",
+        "description": "Comprehensive analysis of malaria infection rates in Kenya using R, demonstrating proficiency in data manipulation, visualization, and statistical analysis.",
+        "link": "r_portfolio.html"
+    },
+    # Add more projects here as needed
+]
+
+
 def generate_resume():
     resume = ResumeBuilder()
 
@@ -109,6 +120,26 @@ def generate_resume():
             height: 100%;
             background-color: var(--secondary-color);
         }
+        .project-item {
+            margin-bottom: 1.5rem;
+        }
+        .project-item h3 {
+            margin-bottom: 0.5rem;
+        }
+        .project-link {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background-color: var(--secondary-color);
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 0.5rem;
+            transition: background-color 0.3s;
+        }
+        .project-link:hover {
+            background-color: #2980b9;
+        }
+
         @media (max-width: 768px) {
             h1 { font-size: 2rem; }
             h2 { font-size: 1.5rem; }
@@ -151,13 +182,25 @@ def generate_resume():
     resume.add("            </div>")
     resume.add("        </section>")
 
+    # Projects
+    resume.add("        <section id='projects'>")
+    resume.add("            <h2>Projects</h2>")
+    for project in projects:
+        resume.add("            <div class='project-item'>")
+        resume.add(f"                <h3>{escape_html(project['name'])}</h3>")
+        resume.add(f"                <p>{escape_html(project['description'])}</p>")
+        resume.add(f"                <a href='{escape_html(project['link'])}' target='_blank' class='project-link'>View Project</a>")
+        resume.add("            </div>")
+    resume.add("        </section>")
+
+
     # Languages
     resume.add("        <section id='languages'>")
     resume.add("            <h2>Languages</h2>")
     languages = [
         {"name": "English", "proficiency": 90},
         {"name": "Swahili", "proficiency": 100},
-        {"name": "Kikuyu", "proficiency": 80}
+        {"name": "Duetsch", "proficiency": 20}
     ]
     for lang in languages:
         resume.add("            <div class='language-item'>")
