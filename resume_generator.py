@@ -225,7 +225,19 @@ def generate_resume():
                 "Provide excellent customer service, address inquiries, and resolve issues promptly.",
                 "Train staff on operational procedures, safety, and product knowledge regularly.",
                 "Monitor and replenish fuel and product stock levels."
-            ]
+            ] 
+
+     # Achievements Section
+    resume.add("<section id='achievements'>")
+    resume.add("    <h2>Achievements</h2>")
+    
+    achievements = [
+        {"description": "Increased Customer Trust and Loyalty", "progress": 90},
+        {"description": "Maintained Compliance with Safety Standards", "progress": 100},
+        {"description": "Improved Operational Efficiency", "progress": 85},
+        {"description": "Enhanced Staff Productivity", "progress": 80}
+    ]
+
         },
         {
             "title": "Research Statistician (Internship)",
