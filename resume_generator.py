@@ -220,7 +220,7 @@ def generate_resume():
         {"name": "Operational Efficiency", "percentage": 85},
         {"name": "Staff Productivity", "percentage": 80}
     ]
-    for achievement in achievements:
+    or achievement in achievements:
         resume.add("            <div class='achievement-item'>")
         resume.add(f"                <div class='achievement-name'>{escape_html(achievement['name'])}</div>")
         resume.add("                <div class='achievement-bar'>")
