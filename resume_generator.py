@@ -211,6 +211,25 @@ def generate_resume():
         resume.add("            </div>")
     resume.add("        </section>")
 
+    # Achievements
+    resume.add("        <section id='achievements'>")
+    resume.add("            <h2>Achievements</h2>")
+    achievements = [
+        {"name": "Customer Trust and Loyalty", "percentage": 90},
+        {"name": "Compliance with Safety Standards", "percentage": 100},
+        {"name": "Operational Efficiency", "percentage": 85},
+        {"name": "Staff Productivity", "percentage": 80}
+    ]
+    for achievement in achievements:
+        resume.add("            <div class='achievement-item'>")
+        resume.add(f"                <div class='achievement-name'>{escape_html(achievement['name'])}</div>")
+        resume.add("                <div class='achievement-bar'>")
+        resume.add(f"                    <div class='achievement-level' style='width: {achievement['percentage']}%;'></div>")
+        resume.add("                </div>")
+        resume.add(f"                <div class='achievement-percentage'>{achievement['percentage']}%</div>")
+        resume.add("            </div>")
+    resume.add("        </section>")
+
     # Work Experience
     resume.add("        <section id='experience'>")
     resume.add("            <h2>Work Experience</h2>")
@@ -225,19 +244,7 @@ def generate_resume():
                 "Provide excellent customer service, address inquiries, and resolve issues promptly.",
                 "Train staff on operational procedures, safety, and product knowledge regularly.",
                 "Monitor and replenish fuel and product stock levels."
-            ] 
-
-     # Achievements Section
-    resume.add("<section id='achievements'>")
-    resume.add("    <h2>Achievements</h2>")
-    
-    achievements = [
-        {"description": "Increased Customer Trust and Loyalty", "progress": 90},
-        {"description": "Maintained Compliance with Safety Standards", "progress": 100},
-        {"description": "Improved Operational Efficiency", "progress": 85},
-        {"description": "Enhanced Staff Productivity", "progress": 80}
-    ]
-
+            ]
         },
         {
             "title": "Research Statistician (Internship)",
@@ -341,7 +348,7 @@ def generate_resume():
                 });
 
                 skill.addEventListener('mouseout', function() {
-                    this.style.transform = 'scale(1)';
+[O                    this.style.transform = 'scale(1)';
                 });
             });
         });
